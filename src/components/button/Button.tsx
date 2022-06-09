@@ -1,9 +1,10 @@
+import classNames from 'classnames';
 import { FC } from 'react';
-import { IButton } from './Button.props';
+import { IButtonProps } from './Button.props';
 
-const Button: FC<IButton> = ({ children }) => {
+const Button: FC<IButtonProps> = ({ children, load = false, ...props }) => {
 	return (
-		<button>
+		<button className={classNames('btn', { 'load-btn': load })} {...props}>
 			{children}
 		</button>
 	)

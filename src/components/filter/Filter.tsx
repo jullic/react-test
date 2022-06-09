@@ -1,9 +1,13 @@
 import { FC } from 'react';
+import Button from '../button/Button';
 import Dropdown from '../dropdown/Dropdown';
+import SearchInput from '../searchInput/SearchInput';
+import { IFilterProps } from './Filter.props';
+import searchImg from '../../resourses/search.svg';
 
-const Filter: FC = () => {
+const Filter: FC<IFilterProps> = () => {
 	const nameOptions = ['Все', 'Название', 'Количество', 'Расстояние'];
-	const conditionOptions = ['Равно', 'Любое', 'Содержит', 'Больше', 'Меньше'];
+	const conditionOptions = ['Любое', 'Равно', 'Содержит', 'Больше', 'Меньше'];
 
 	return (
 		<div className="filter">
@@ -11,10 +15,10 @@ const Filter: FC = () => {
 				<div className="filter-content">
 					<Dropdown options={nameOptions} />
 					<Dropdown options={conditionOptions} />
-					<input type="text" className="filter-element search" placeholder="Значение" />
-					<button className="filter-element btn">
-						<img className="btn-img" src="search.svg" alt="search" />
-					</button>
+					<SearchInput />
+					<Button>
+						<img className="btn-img" src={searchImg} alt="search" />
+					</Button>
 				</div>
 			</div>
 		</div>

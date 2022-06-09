@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import { IDropdown } from './Dropdown.props';
+import { IDropdownProps } from './Dropdown.props';
 
-const Dropdown: FC<IDropdown> = ({ options }) => {
+const Dropdown: FC<IDropdownProps> = ({ options }) => {
 	return (
 		<div className="filter-element dropdown">
 			<select className="select">
