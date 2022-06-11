@@ -6,7 +6,7 @@ import { IMainProps } from './Main.props';
 
 const Main: FC<IMainProps> = () => {
 
-	const entities: IEntity[] = []
+	const entities: IEntity[] = [{ date: '06.02.2022', distance: 200, id: 1, name: 'test', quantity: 10 }];
 
 	return (
 		<main className="main">
@@ -23,7 +23,7 @@ const Main: FC<IMainProps> = () => {
 				</div>
 			</div>
 		</main>
-	)
+	);
 }
 
 export default Main;

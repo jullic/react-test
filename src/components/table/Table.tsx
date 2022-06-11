@@ -3,6 +3,12 @@ import Entity from '../entity/Entity';
 import { ITableProps } from './Table.props';
 
 const Table: FC<ITableProps> = ({ entities }) => {
+	if (entities.length === 0) {
+		return (
+			<h2 className='h2'>Таблица пуста</h2>
+		)
+	}
+
 	return (
 		<table className="table">
 			<tbody className="tbody">
