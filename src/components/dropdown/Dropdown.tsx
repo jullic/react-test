@@ -12,7 +12,6 @@ const Dropdown: FC<IDropdownProps> = ({ options, type, ...props }) => {
 		if (selectRef && type === 'dependence') {
 			dispatch(conditionChanged(selectRef.current!.value));
 		}
-		console.log(1);
 	});
 
 	const changeHandler = (e: ChangeEvent<HTMLSelectElement>) => {

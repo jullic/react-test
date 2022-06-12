@@ -7,7 +7,7 @@ const Button: FC<IButtonProps> = ({ children, load = false, ...props }) => {
 		<button className={classNames('btn', { 'load-btn': load })} {...props}>
 			{children}
 		</button>
-	)
+	);
 }
 
 export default Button;

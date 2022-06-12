@@ -2,10 +2,6 @@ import { IDependencesOption } from './../../interfaces/option.interface';
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IOption } from '../../interfaces/option.interface';
 
-// type ColumnType = 'all' | 'title' | 'quantity' | 'distance';
-// type ConditionType = 'any' | 'equaly' | 'contains' | 'more' | 'less';
-// let all = [{ option: 'Любое', value: 'any' }, { option: 'Равно', value: 'equaly' }, { option: 'Содержит', value: 'contains' }, { option: 'Больше', value: 'more' }, { option: 'Меньше', value: 'less' }];
-
 interface IState {
 	input: string;
 	inputDisactive: boolean,
@@ -13,7 +9,7 @@ interface IState {
 	conditions: IDependencesOption[];
 	activeColumn: string;
 	activeCondition: string;
-}
+};
 
 const initialState: IState = {
 	input: '',
@@ -22,7 +18,7 @@ const initialState: IState = {
 	conditions: [{ option: 'Любое', value: 'any' }],
 	activeColumn: 'all',
 	activeCondition: 'any',
-}
+};
 
 const filtersSlice = createSlice({
 	name: 'filters',
@@ -30,13 +26,13 @@ const filtersSlice = createSlice({
 	reducers: {
 		columnChanged: (state, action: PayloadAction<string>) => {
 			state.activeColumn = action.payload;
+			state.input = '';
 
 			let activeColumn = state.columns.find(col => col.value === action.payload);
 
 			if (activeColumn) {
 				state.conditions = activeColumn.dependencies;
 			}
-
 			if (action.payload === 'all') {
 				state.inputDisactive = true;
 			}

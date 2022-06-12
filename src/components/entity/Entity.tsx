@@ -9,7 +9,7 @@ const Entity: FC<IEntityProps> = ({ entity }) => {
 			<td className='td'>{entity.quantity}</td>
 			<td className='td'>{entity.distance}</td>
 		</tr>
-	)
+	);
 }
 
 export default Entity;

@@ -8,10 +8,11 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^17.0.41",
+    "@types/node": "^17.0.42",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "classnames": "^2.3.1",
+    "json-server": "^0.17.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-redux": "^8.0.2",
@@ -22,6 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "generate": "ts-node src/data/generateData",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -43,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/json-server": "^0.14.4",
+    "ts-node": "^10.8.1"
   }
 }

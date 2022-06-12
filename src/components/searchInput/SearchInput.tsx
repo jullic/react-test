@@ -27,7 +27,7 @@ const SearchInput: FC<ISearchInputProps> = ({ ...props }) => {
 
 	return (
 		<input onChange={changeHandler} value={value} type={validateInput(activeColumn)} className="filter-element search" placeholder="Значение" {...props} />
-	)
+	);
 }
 
 export default SearchInput;
